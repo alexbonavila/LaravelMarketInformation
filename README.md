@@ -2,7 +2,7 @@
 ## Descripció
 LaravelMarketInformation és una aplicació web feta amb Laravel, aquesta aplicació el que fa es proveir d'informació financera tant en temps real com històrica (a partir del 2015), aquesta aplicació està pensada exclusivament per a clients registrats, tot i que això no vol dir que els que no estan logats no pugin fer res, tindran una main page per poder veure una demo del que es trobaran si es registren.
 ## Budges
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/alexbonavila/LaravelMarketInformation/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/alexbonavila/LaravelMarketInformation/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/alexbonavila/LaravelMarketInformation/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/alexbonavila/LaravelMarketInformation/?branch=master) [![Build Status](https://travis-ci.org/alexbonavila/LaravelMarketInformation.svg?branch=master)](https://travis-ci.org/alexbonavila/LaravelMarketInformation)
 ## Llibreries de terçers
  $ composer require guzzlehttp/guzzle
 ## Changelog
