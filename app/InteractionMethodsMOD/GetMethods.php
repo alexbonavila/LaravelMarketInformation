@@ -8,7 +8,7 @@ class GetMethods
 {
     public function companyLookup(Client $client, $to_search)
     {
-        $response = $client->get("http://dev.markitondemand.com/MODApis/Api/v2/Lookup?symbol=".$to_search);
+        $response = $client->get("http://dev.markitondemand.com/MODApis/Api/v2/Lookup?input=".$to_search);
 
         return $response;
     }
