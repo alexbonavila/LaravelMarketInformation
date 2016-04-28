@@ -8,5 +8,7 @@ He tornat a començar perquè m'he equivocat l'hora de fer el social login però
 Avui he redisenyat una mica la forma de emmagatzemar la informació a la BD, els canvis estan fets a la wiki, i també he comançat a fer les metodes get amb GuzzleHttp.
 ## 25/04/16
 Després d'acabar els mètodes per interactuar amb l'API externa a la qual a partir d'ara hem referiré amb les sigles **MOD**(Markit On Demand) he fet els punts que tenia pendents a tasques: README.md, scrutinizer, etc.
-## 26/04/16
+## 26/04/16 i 27/04/16
 He dissenyat tots els models de la BD nessecaris de moment i he execuat les migracións, per fer tot això també he fet un diagrama de la BD.
+## 28/04/16
+He començat a fer una mica de front end es a dir a personalitzar la l'Admin LTE
