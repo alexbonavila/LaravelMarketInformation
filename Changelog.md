@@ -11,4 +11,6 @@ Després d'acabar els mètodes per interactuar amb l'API externa a la qual a par
 ## 26/04/16 i 27/04/16
 He dissenyat tots els models de la BD nessecaris de moment i he execuat les migracións, per fer tot això també he fet un diagrama de la BD.
 ## 28/04/16
-He començat a fer una mica de front end es a dir a personalitzar la l'Admin LTE
+He començat a fer una mica de frontend és a dir a personalitzar la plantilla l'Admin LTE
+## 02/05/16
+He arreglat les BD després de la classe que ens a donat Sergi

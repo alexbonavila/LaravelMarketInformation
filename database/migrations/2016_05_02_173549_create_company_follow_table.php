@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSimulatorHistoryTable extends Migration
+class CreateCompanyFollowTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,15 @@ class CreateSimulatorHistoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('simulator_history', function (Blueprint $table) {
+        Schema::create('company_follow', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_email');
-            $table->string('symbol');
-            $table->string('frequency');
+            $table->float('money_to_buy');
+            $table->float('quote_to_buy');
+            $table->float('money_to_sell');
+            $table->float('quote_to_sell');
+            $table->float('tax_percent_to_discount');
+            $table->float('result');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ class CreateSimulatorHistoryTable extends Migration
      */
     public function down()
     {
-        Schema::drop('simulator_history');
+        Schema::drop('company_follow');
     }
 }

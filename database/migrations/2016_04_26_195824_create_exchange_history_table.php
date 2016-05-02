@@ -14,9 +14,9 @@ class CreateExchangeHistoryTable extends Migration
     {
         Schema::create('exchange_history', function (Blueprint $table) {
             $table->string('symbol');
-            $table->longText('positions');
-            $table->longText('dates');
-            $table->longText('values');
+            $table->Text('positions');
+            $table->Text('dates');
+            $table->Text('values');
             $table->string('max_date');
             $table->string('min_date');
             $table->float('min_value');
