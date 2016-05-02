@@ -15,12 +15,8 @@ class CreateCompanyFollowTable extends Migration
         Schema::create('company_follow', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_email');
-            $table->float('money_to_buy');
-            $table->float('quote_to_buy');
-            $table->float('money_to_sell');
-            $table->float('quote_to_sell');
-            $table->float('tax_percent_to_discount');
-            $table->float('result');
+            $table->Text('company_symbols');
+            $table->string('frequency');
             $table->timestamps();
         });
     }
