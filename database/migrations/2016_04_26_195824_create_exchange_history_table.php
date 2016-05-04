@@ -13,6 +13,7 @@ class CreateExchangeHistoryTable extends Migration
     public function up()
     {
         Schema::create('exchange_history', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('symbol');
             $table->Text('positions');
             $table->Text('dates');

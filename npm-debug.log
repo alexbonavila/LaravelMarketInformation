@@ -1,0 +1,92 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/alumne/node-v4.2.3-linux-x64/bin/node',
+1 verbose cli   '/home/alumne/node-v4.2.3-linux-x64/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.3
+4 verbose readDependencies loading dependencies from /home/alumne/Code/LaravelMarketInformation/package.json
+5 verbose install where, deps [ '/home/alumne/Code/LaravelMarketInformation',
+5 verbose install   [ 'bootstrap-sass', 'laravel-elixir', 'gulp' ] ]
+6 verbose install where, peers [ '/home/alumne/Code/LaravelMarketInformation', [] ]
+7 verbose installManyTop reading for lifecycle /home/alumne/Code/LaravelMarketInformation/package.json
+8 info preinstall @
+9 verbose installManyTop reading scoped package data from /home/alumne/Code/LaravelMarketInformation/node_modules/bootstrap-sass/package.json
+10 verbose installManyTop reading scoped package data from /home/alumne/Code/LaravelMarketInformation/node_modules/gulp/package.json
+11 verbose installManyTop reading scoped package data from /home/alumne/Code/LaravelMarketInformation/node_modules/laravel-elixir/package.json
+12 verbose installManyTop reading scoped package data from /home/alumne/Code/LaravelMarketInformation/node_modules/laravel-elixir-vueify/package.json
+13 verbose installManyTop reading scoped package data from /home/alumne/Code/LaravelMarketInformation/node_modules/vue/package.json
+14 verbose readDependencies loading dependencies from /home/alumne/Code/LaravelMarketInformation/package.json
+15 verbose targetResolver reading package data from /home/alumne/Code/LaravelMarketInformation/node_modules/bootstrap-sass/package.json
+16 verbose targetResolver reading package data from /home/alumne/Code/LaravelMarketInformation/node_modules/gulp/package.json
+17 verbose targetResolver reading package data from /home/alumne/Code/LaravelMarketInformation/node_modules/laravel-elixir/package.json
+18 verbose targetResolver reading package data from /home/alumne/Code/LaravelMarketInformation/node_modules/laravel-elixir-vueify/package.json
+19 verbose targetResolver reading package data from /home/alumne/Code/LaravelMarketInformation/node_modules/vue/package.json
+20 verbose targetResolver reading package data from /home/alumne/Code/LaravelMarketInformation/node_modules/.bin/gulp/package.json
+21 verbose already installed skipping gulp@^3.9.1 /home/alumne/Code/LaravelMarketInformation
+22 verbose already installed skipping bootstrap-sass@^3.0.0 /home/alumne/Code/LaravelMarketInformation
+23 verbose already installed skipping laravel-elixir@^5.0.0 /home/alumne/Code/LaravelMarketInformation
+24 silly install resolved []
+25 info build /home/alumne/Code/LaravelMarketInformation
+26 info linkStuff @
+27 silly linkStuff @ has /home/alumne/Code as its parent node_modules
+28 verbose linkBins @
+29 verbose linkMans @
+30 verbose rebuildBundles @
+31 verbose rebuildBundles [ '.bin',
+31 verbose rebuildBundles   'bootstrap-sass',
+31 verbose rebuildBundles   'gulp',
+31 verbose rebuildBundles   'laravel-elixir',
+31 verbose rebuildBundles   'laravel-elixir-vueify',
+31 verbose rebuildBundles   'vue' ]
+32 verbose rebuild bundle /home/alumne/Code/LaravelMarketInformation/node_modules/laravel-elixir-vueify
+33 info build /home/alumne/Code/LaravelMarketInformation/node_modules/laravel-elixir-vueify
+34 info preinstall laravel-elixir-vueify@1.0.3
+35 info linkStuff laravel-elixir-vueify@1.0.3
+36 silly linkStuff laravel-elixir-vueify@1.0.3 has /home/alumne/Code/LaravelMarketInformation/node_modules as its parent node_modules
+37 verbose linkBins laravel-elixir-vueify@1.0.3
+38 verbose linkMans laravel-elixir-vueify@1.0.3
+39 verbose rebuildBundles laravel-elixir-vueify@1.0.3
+40 verbose rebuildBundles [ 'babel-core',
+40 verbose rebuildBundles   'babel-plugin-transform-runtime',
+40 verbose rebuildBundles   'babel-preset-es2015',
+40 verbose rebuildBundles   'babel-runtime',
+40 verbose rebuildBundles   'vue-hot-reload-api',
+40 verbose rebuildBundles   'vueify',
+40 verbose rebuildBundles   'vueify-insert-css' ]
+41 info install laravel-elixir-vueify@1.0.3
+42 info postinstall laravel-elixir-vueify@1.0.3
+43 verbose rebuild bundle /home/alumne/Code/LaravelMarketInformation/node_modules/vue
+44 info build /home/alumne/Code/LaravelMarketInformation/node_modules/vue
+45 info preinstall vue@1.0.21
+46 info linkStuff vue@1.0.21
+47 silly linkStuff vue@1.0.21 has /home/alumne/Code/LaravelMarketInformation/node_modules as its parent node_modules
+48 verbose linkBins vue@1.0.21
+49 verbose linkMans vue@1.0.21
+50 verbose rebuildBundles vue@1.0.21
+51 verbose rebuildBundles [ '.bin', 'envify' ]
+52 info install vue@1.0.21
+53 info postinstall vue@1.0.21
+54 info install @
+55 info postinstall @
+56 info prepublish @
+57 verbose validateInstall loading /home/alumne/Code/LaravelMarketInformation/package.json for validation
+58 verbose stack Error: The package babel-runtime@5.8.38 does not satisfy its siblings' peerDependencies requirements!
+58 verbose stack     at /home/alumne/node-v4.2.3-linux-x64/lib/node_modules/npm/lib/install.js:125:32
+58 verbose stack     at /home/alumne/node-v4.2.3-linux-x64/lib/node_modules/npm/lib/install.js:268:7
+58 verbose stack     at /home/alumne/node-v4.2.3-linux-x64/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+58 verbose stack     at /home/alumne/node-v4.2.3-linux-x64/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+58 verbose stack     at cb (/home/alumne/node-v4.2.3-linux-x64/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+58 verbose stack     at /home/alumne/node-v4.2.3-linux-x64/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+58 verbose stack     at cb (/home/alumne/node-v4.2.3-linux-x64/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+58 verbose stack     at /home/alumne/node-v4.2.3-linux-x64/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+58 verbose stack     at cb (/home/alumne/node-v4.2.3-linux-x64/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+58 verbose stack     at /home/alumne/node-v4.2.3-linux-x64/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+59 verbose cwd /home/alumne/Code/LaravelMarketInformation
+60 error Linux 3.19.0-58-generic
+61 error argv "/home/alumne/node-v4.2.3-linux-x64/bin/node" "/home/alumne/node-v4.2.3-linux-x64/bin/npm" "install"
+62 error node v4.2.3
+63 error npm  v2.14.7
+64 error code EPEERINVALID
+65 error peerinvalid The package babel-runtime@5.8.38 does not satisfy its siblings' peerDependencies requirements!
+65 error peerinvalid Peer vueify@8.4.1 wants babel-runtime@^6.0.0
+66 verbose exit [ 1, true ]

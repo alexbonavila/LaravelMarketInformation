@@ -13,4 +13,6 @@ He dissenyat tots els models de la BD nessecaris de moment i he execuat les migr
 ## 28/04/16
 He començat a fer una mica de frontend és a dir a personalitzar la plantilla l'Admin LTE
 ## 02/05/16
-He arreglat les BD després de la classe que ens a donat Sergi
+He arreglat les BD després de la classe que ens a donat Sergi, i tambe he començat a fer la part de grafics al front end.
+## 03/05/16 i 04/05/16
+He intentat fer Vue però he tingut problemes amb npm per aixo he canviat de tasca. He començat a fer els controladors que omplen la BD i s'executem amb scheduler i també he ficat camp id a totes les taules i algun unique. I per ultim per fer les proves he creat una ruta de test que despres es borrara.
