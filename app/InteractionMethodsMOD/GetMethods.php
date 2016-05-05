@@ -9,14 +9,18 @@ class GetMethods
 
     public function companyLookup(Client $client, $to_search)
     {
-        $response = $client->get("http://dev.markitondemand.com/MODApis/Api/v2/Lookup?input=".$to_search);
+        $response = $client->get("http://dev.markitondemand.com/MODApis/Api/v2/Lookup/json?input=".$to_search);
+
+        $response =json_decode($response->getBody());
 
         return $response;
     }
 
     public function stockQuote(Client $client, $company_symbol)
     {
-        $response = $client->get("http://dev.markitondemand.com/MODApis/Api/v2/Quote?symbol=".$company_symbol);
+        $response = $client->get("http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol=".$company_symbol);
+
+        $response =json_decode($response->getBody());
 
         return $response;
     }
