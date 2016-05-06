@@ -18,3 +18,5 @@ He arreglat les BD després de la classe que ens a donat Sergi, i tambe he comen
 He intentat fer Vue però he tingut problemes amb npm per aixo he canviat de tasca. He començat a fer els controladors que omplen la BD i s'executem amb scheduler i també he ficat camp id a totes les taules i algun unique. I per ultim per fer les proves he creat una ruta de test que despres es borrara.
 ## 05/05/16
 Ja tinc els controladors fets per persistir a la BD les dades que jo vull nomes falta ficar-ho a l'scheduler per acabar del tot amb aquesta part.
+## 06/05/16
+He fet dues comades artisan per executar tant des de consola com des de l'schedule per tant he fet una comanda per oplir la BD d'empreses i un altra per oplir la taula historica, també e actualitzat el readme amb aquesta informació.

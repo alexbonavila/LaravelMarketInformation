@@ -14,6 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         // Commands\Inspire::class,
+        Commands\CompaniesTableFeeder::class,
+        Commands\ExchangeHistoryTableFeeder::class,
     ];
 
     /**
@@ -26,5 +28,8 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+        //$schedule->command('companies_table:feed')->DefineTime;
+        $schedule->command('history_table:feed')->monthly();
+
     }
 }

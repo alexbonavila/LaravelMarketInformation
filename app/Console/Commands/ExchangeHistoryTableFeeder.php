@@ -1,22 +1,47 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Console\Commands;
 
 use App\InteractionMethodsMOD\GetMethods;
 use Carbon\Carbon;
 use DB;
-use Illuminate\Http\Request;
-
 use GuzzleHttp\Client;
+use Illuminate\Console\Command;
 
-use App\Http\Requests;
-
-/**
- * Class ExchangeHistoryTableFeeder
- * @package App\Http\Controllers
- */
-class ExchangeHistoryTableFeeder extends Controller
+class ExchangeHistoryTableFeeder extends Command
 {
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'history_table:feed';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Command description';
+
+    /**
+     * Create a new command instance.
+     *
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
+        $this->getSymbolsFormDB();
+    }
 
     /**
      *Elimina les dades antigues i n'insereix unes de noves
@@ -75,4 +100,5 @@ class ExchangeHistoryTableFeeder extends Controller
             ]
         ]);
     }
+
 }
