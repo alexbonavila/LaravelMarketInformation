@@ -1,12 +1,13 @@
 {
   "private": true,
-  "devDependencies": {
-    "gulp": "^3.9.1"
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "gulp watch"
   },
-  "dependencies": {
-    "bootstrap-sass": "^3.0.0",
+  "devDependencies": {
+    "gulp": "^3.9.1",
     "laravel-elixir": "^5.0.0",
-    "laravel-elixir-vueify": "^1.0.3",
+    "bootstrap-sass": "^3.3.0",
     "vue": "^1.0.21",
     "vue-resource": "^0.7.0",
     "vue-router": "^0.7.13"

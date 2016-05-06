@@ -20,3 +20,6 @@ He intentat fer Vue però he tingut problemes amb npm per aixo he canviat de tas
 Ja tinc els controladors fets per persistir a la BD les dades que jo vull nomes falta ficar-ho a l'scheduler per acabar del tot amb aquesta part.
 ## 06/05/16
 He fet dues comades artisan per executar tant des de consola com des de l'schedule per tant he fet una comanda per oplir la BD d'empreses i un altra per oplir la taula historica, també e actualitzat el readme amb aquesta informació.
+Problema amb el Vue solucionat tenia el fitxer pakage.json si us avieu descarregat el projecte anteriorment recomano actualitzar, eliminar la carpeta node_modules i executar un:
+
+`$ npm install`
