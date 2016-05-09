@@ -19,6 +19,8 @@ La seguent comanda el que fa és omplir la BD Historica amb la informació deman
 https://github.com/alexbonavila/LaravelMarketInformation/blob/master/Changelog.md
 LaravelMarketInformation/Changelog.md
 ## Links externs
+### Documentació
+http://alexbonavila.github.io/DocumentationLMI/public/api/master/
 ### Wiki
 http://acacha.org/mediawiki/Usuari:Alex_bonavila/Credit_de_sintesi
 ### Documentació llibreries de tercers
