@@ -10,13 +10,13 @@
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<div class="panel panel-default">
-					{{--<div id="demo">
-						<p>{{message}}</p>
-						<input v-model="message">
-					</div>--}}
+					{{--<div id="app">
+						<h1>{{message}}</h1>
+
+					</div>
+					<script src="{{ asset('js/main.js') }}"></script>--}}
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="{{ asset('js/main.js') }}"></script>
 @endsection
