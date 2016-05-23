@@ -58,5 +58,7 @@ desired effect
     @include('layouts.partials.scripts')
 @show
 
+
+<script src="ja.js"></script>
 </body>
 </html>

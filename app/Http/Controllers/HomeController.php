@@ -8,6 +8,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use DB;
 use Illuminate\Http\Request;
 
 /**
@@ -16,23 +17,36 @@ use Illuminate\Http\Request;
  */
 class HomeController extends Controller
 {
+
     /**
-     * Create a new controller instance.
-     *
-     * @return void
+     * HomeController constructor.
      */
     public function __construct()
     {
         $this->middleware('auth');
     }
 
+
     /**
-     * Show the application dashboard.
-     *
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
-        return view('home');
+        $data_grid = $this->getCompaniesInfoFromDB();
+        $columns="['id', 'symbol', 'name', 'exchange']";
+
+        return view('home', ['data_grid' => $data_grid, 'columns'=> $columns]);
+    }
+
+    /**
+     * @return string
+     */
+    public function getCompaniesInfoFromDB()
+    {
+        $companies = DB::table('companies')->get();
+
+        $companies = json_encode($companies);
+
+        return $companies;
     }
 }

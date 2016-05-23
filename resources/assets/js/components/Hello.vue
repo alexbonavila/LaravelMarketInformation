@@ -1,7 +1,14 @@
 <template>
-    <div class="hello">
-        <h1>{{ msg }}</h1>
-    </div>
+    <div id="demo">
+        <form id="search">
+            Search <input name="query" v-model="searchQuery">
+        </form>
+        <demo-grid
+        :data="gridData"
+        :columns="gridColumns"
+        :filter-key="searchQuery">
+    </demo-grid>
+</div>
 </template>
 
 <script>
@@ -15,5 +22,7 @@ export default {
             msg: 'Hello World!'
         }
     }
+
+
 }
 </script>

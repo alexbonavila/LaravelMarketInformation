@@ -23,3 +23,9 @@ He fet dues comades artisan per executar tant des de consola com des de l'schedu
 Problema amb el Vue solucionat tenia el fitxer pakage.json si us avieu descarregat el projecte anteriorment recomano actualitzar, eliminar la carpeta node_modules i executar un:
 
 `$ npm install`
+## 09/05/16
+Avui he ficat les dues eines que ha manat sergi per a classe una per a documentar codi(SAMI) i l'altra per saber l'abast dels testos(coveralls), també he començat a fer la pagina principal.
+## 10/05/16 i 23/05/16
+He estat uns dies ausent del credit per que tenia que fer feina pendent que tenia del curs en general encara que no he fet commits ni he ficat res al changelog he anat fent coses que mostrare a continuació:
+* Pagina home del usuari amb una llista de les empreses, aquesta llista dona diferent informació està feta amb VUE i extreu la informació de la BD
+*
