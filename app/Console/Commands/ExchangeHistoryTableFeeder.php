@@ -8,6 +8,10 @@ use DB;
 use GuzzleHttp\Client;
 use Illuminate\Console\Command;
 
+/**
+ * Class ExchangeHistoryTableFeeder
+ * @package App\Console\Commands
+ */
 class ExchangeHistoryTableFeeder extends Command
 {
     /**
@@ -22,7 +26,7 @@ class ExchangeHistoryTableFeeder extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Feed the table exchange_history from DB';
 
     /**
      * Create a new command instance.

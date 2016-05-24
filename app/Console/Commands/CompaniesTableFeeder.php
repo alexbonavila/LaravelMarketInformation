@@ -8,6 +8,10 @@ use DB;
 use GuzzleHttp\Client;
 use Illuminate\Console\Command;
 
+/**
+ * Class CompaniesTableFeeder
+ * @package App\Console\Commands
+ */
 class CompaniesTableFeeder extends Command
 {
     /**
@@ -44,6 +48,9 @@ class CompaniesTableFeeder extends Command
         $this->getSymbolsFormArray();
     }
 
+    /**
+     *
+     */
     public function getSymbolsFormArray()
     {
         DB::table('companies')->truncate();
@@ -62,6 +69,10 @@ class CompaniesTableFeeder extends Command
         }
     }
 
+    /**
+     * @param GetMethods $interaction_methods
+     * @param $symbol
+     */
     public function httpCall(GetMethods $interaction_methods, $symbol)
     {
         $glz_cli=new Client();
@@ -72,7 +83,11 @@ class CompaniesTableFeeder extends Command
 
     }
 
-    public function discardRepeated($data,$symbol)
+    /**
+     * @param $data
+     * @param $symbol
+     */
+    public function discardRepeated($data, $symbol)
     {
         for($i=0;$i<count($data);$i++){
 
@@ -87,6 +102,9 @@ class CompaniesTableFeeder extends Command
         }
     }
 
+    /**
+     * @param $data
+     */
     public function storeDataInDB($data)
     {
         DB::table('companies')->insert([

@@ -9,22 +9,36 @@ use App\Http\Requests;
 
 class testController extends Controller
 {
+
     public function testMethod()
     {
-        $companies = $this->getCompaniesInfoFromDB();
+        $symbol="AAPL";
+
+        $result = $this->getCompaniesInfoFromDB($symbol);
+
+        $myfile = fopen("testfile.txt", "w");
+        fwrite($myfile, $result);
+        fclose($myfile);
+
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename='.basename('file.txt'));
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($myfile));
+        readfile($myfile);
 
 
-
-        return view('test', ['name' => $companies]);
+        return ;
     }
 
-    public function getCompaniesInfoFromDB()
+    public function getCompaniesInfoFromDB($symbol)
     {
-        $companies = DB::table('companies')->get();
+        $company_history = DB::table('exchange_history')->where('symbol', $symbol)->first();
 
-        $companies = json_encode($companies);
+        $company_history = json_encode($company_history);
 
-        return $companies;
+        return $company_history;
     }
     
 }

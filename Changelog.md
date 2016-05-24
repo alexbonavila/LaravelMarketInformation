@@ -28,4 +28,6 @@ Avui he ficat les dues eines que ha manat sergi per a classe una per a documenta
 ## 10/05/16 i 23/05/16
 He estat uns dies ausent del credit per que tenia que fer feina pendent que tenia del curs en general encara que no he fet commits ni he ficat res al changelog he anat fent coses que mostrare a continuació:
 * Pagina home del usuari amb una llista de les empreses, aquesta llista dona diferent informació està feta amb VUE i extreu la informació de la BD
-*
+* He començata a fer que l'uauari es puge descarregar informació de la api
+## 24/5/16
+Avui he fet una comanda que passa la taula de valors de mercats historics de la bd a diferents formats per que posteriorment l'usuari puge descarregar-sels. He utilitzat la llibreria 

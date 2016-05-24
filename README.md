@@ -14,10 +14,15 @@ La seguent comanda el que fa és omplir la BD Historica amb la informació deman
 
 
 ## Llibreries de terçers
- `$ composer require guzzlehttp/guzzle`
+GuzzleHttp per les peticions HTTP des de PHP:
+https://github.com/guzzle/guzzle
+Laravel Formatter per canviar entre formats JSON, XML, CSV i YML:
+https://github.com/SoapBox/laravel-formatter
 ## Changelog
+Web URL:
 https://github.com/alexbonavila/LaravelMarketInformation/blob/master/Changelog.md
-LaravelMarketInformation/Changelog.md
+Project Location
+`LaravelMarketInformation/Changelog.md`
 ## Links externs
 ### Documentació
 http://alexbonavila.github.io/DocumentationLMI/public/api/master/
