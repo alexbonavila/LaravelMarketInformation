@@ -32,4 +32,6 @@ He estat uns dies ausent del credit per que tenia que fer feina pendent que teni
 ## 24/5/16
 Avui he fet una comanda que passa la taula de valors de mercats historics de la bd a diferents formats per que posteriorment l'usuari puge descarregar-sels. He utilitzat la llibreria Laravel Formatter
 
-També he creat la pagina per descarregar la informació que es mostra a la web
+També he creat la pagina per descarregar la informació que es mostra a la web.
+
+I per ultim he començat a fer la pagina que s'encarrega de fer els calculs de moment nomes tinc el formulari falta tota la "xixa"
