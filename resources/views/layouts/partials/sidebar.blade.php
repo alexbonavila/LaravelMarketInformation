@@ -29,8 +29,7 @@
                 <a href="#"><i class='fa fa-link'></i> <span>Eines</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('download_info') }}">Descarregar informació</a></li>
-                    <li><a href="#">Segiment per correu</a></li>
-                    <li><a href="#">Simulador/Calculadora</a></li>
+                    <li><a href="{{ url('calc') }}">Simulador/Calculadora</a></li>
                 </ul>
             </li>
         </ul><!-- /.sidebar-menu -->
