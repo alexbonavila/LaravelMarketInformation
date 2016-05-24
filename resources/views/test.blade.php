@@ -5,13 +5,7 @@
 </head>
 
 <body>
-<button type="submit" onclick="window.open('text.txt')">Download!</button>
-
-<script>
-    function Download(){
-        window.open('text.txt');
-    }
-</script>
+<a href="http://localhost:8000/historic_info_files/json/AAPL.json" download="AAPL.json">Download</a>
 
 </body>
 </html>

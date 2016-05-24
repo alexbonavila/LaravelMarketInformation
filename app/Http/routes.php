@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('test', 'testController@testMethod');
+
+Route::get('download_info', 'DownloadInfoController@index');
+
