@@ -34,3 +34,11 @@ new Vue({
         gridColumns: ['id', 'symbol', 'name', 'exchange']
     }
 });
+
+new Vue({
+    el: '#form',
+    data: {
+        symbol: '',
+        extension: ''
+    }
+});

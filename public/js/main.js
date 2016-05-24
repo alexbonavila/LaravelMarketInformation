@@ -10061,6 +10061,14 @@ new _vue2.default({
     }
 });
 
+new _vue2.default({
+    el: '#form',
+    data: {
+        symbol: '',
+        extension: ''
+    }
+});
+
 },{"vue":2}]},{},[3]);
 
 //# sourceMappingURL=main.js.map
