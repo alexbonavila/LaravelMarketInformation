@@ -30,4 +30,6 @@ He estat uns dies ausent del credit per que tenia que fer feina pendent que teni
 * Pagina home del usuari amb una llista de les empreses, aquesta llista dona diferent informació està feta amb VUE i extreu la informació de la BD
 * He començata a fer que l'uauari es puge descarregar informació de la api
 ## 24/5/16
-Avui he fet una comanda que passa la taula de valors de mercats historics de la bd a diferents formats per que posteriorment l'usuari puge descarregar-sels. He utilitzat la llibreria 
+Avui he fet una comanda que passa la taula de valors de mercats historics de la bd a diferents formats per que posteriorment l'usuari puge descarregar-sels. He utilitzat la llibreria Laravel Formatter
+
+També he creat la pagina per descarregar la informació que es mostra a la web
