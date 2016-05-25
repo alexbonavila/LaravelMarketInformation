@@ -29,4 +29,15 @@ class CalculatorController extends Controller
     {
         return view('calculator');
     }
+
+    /**
+     *Store calculator data in DB
+     */
+    public function store()
+    {
+
+    }
+
+
+
 }

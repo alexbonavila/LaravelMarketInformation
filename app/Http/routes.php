@@ -20,3 +20,5 @@ Route::get('test', 'testController@testMethod');
 Route::get('download_info', 'DownloadInfoController@index');
 
 Route::get('calc', 'CalculatorController@index');
+
+Route::post('calc/save','CalculatorController@store');
