@@ -32,8 +32,9 @@ class CalculatorController extends Controller
 
     /**
      *Store calculator data in DB
+     * @param Request $request
      */
-    public function store()
+    public function store(Request $request)
     {
 
     }

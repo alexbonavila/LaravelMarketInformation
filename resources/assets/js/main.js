@@ -42,4 +42,3 @@ new Vue({
         extension: ''
     }
 });
-
