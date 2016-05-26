@@ -14,13 +14,15 @@ class CreateSimulatorHistoryTable extends Migration
     {
         Schema::create('simulator_history', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_email');
+            $table->string('user_id');
             $table->float('quantity_to_buy');
             $table->float('quote_to_buy');
+            $table->float('price_to_buy');
             $table->float('quantity_to_sell');
             $table->float('quote_to_sell');
             $table->float('tax_percent_to_discount');
-            $table->float('result');
+            $table->float('price_to_sell');
+            $table->float('gains_or_losses');
             $table->timestamps();
         });
     }
