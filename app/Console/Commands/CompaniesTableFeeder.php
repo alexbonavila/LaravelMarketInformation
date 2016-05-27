@@ -31,7 +31,6 @@ class CompaniesTableFeeder extends Command
     /**
      * Create a new command instance.
      *
-     * @return void
      */
     public function __construct()
     {
@@ -66,7 +65,25 @@ class CompaniesTableFeeder extends Command
             $symbol=$symbols_nasdq[$i];
             $gm = new GetMethods();
             $this->httpCall($gm,$symbol);
+
+            sleep(4);
+
+            switch($i){
+                case 0:
+                    echo "0%\n";
+                    break;
+                case 24:
+                    echo "25%\n";
+                    break;
+                case 49:
+                    echo "50%\n";
+                    break;
+                case 74:
+                    echo "75%\n";
+            }
         }
+        echo("100 % Table companies fed\n");
+
     }
 
     /**

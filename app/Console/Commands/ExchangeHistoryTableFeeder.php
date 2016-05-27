@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use DB;
 use GuzzleHttp\Client;
 use Illuminate\Console\Command;
+use Symfony\Component\Config\Definition\Exception\Exception;
 
 /**
  * Class ExchangeHistoryTableFeeder
@@ -56,14 +57,34 @@ class ExchangeHistoryTableFeeder extends Command
 
         $symbols = DB::table('companies')->select('symbol')->get();
 
-        for($i=0; $i<count($symbols); $i++)
-        {
-            $symbol=$symbols[$i]->symbol;
-            $gm = new GetMethods();
-            $this->httpCall($gm,$symbol);
 
-        }
+            for($i=0; $i<count($symbols); $i++)
+            {
+                try{
+                    $symbol=$symbols[$i]->symbol;
+                    $gm = new GetMethods();
+                    $this->httpCall($gm,$symbol);
 
+                    sleep(4);
+                }catch(Exception $e){}
+
+                switch($i){
+                    case 0:
+                        echo "0%\n";
+                        break;
+                    case 24:
+                        echo "25%\n";
+                        break;
+                    case 49:
+                        echo "50%\n";
+                        break;
+                    case 74:
+                        echo "75%\n";
+                }
+
+            }
+
+            echo("100% Table exchange_history fed\n");
     }
 
     /**

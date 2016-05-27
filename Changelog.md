@@ -29,9 +29,16 @@ Avui he ficat les dues eines que ha manat sergi per a classe una per a documenta
 He estat uns dies ausent del credit per que tenia que fer feina pendent que tenia del curs en general encara que no he fet commits ni he ficat res al changelog he anat fent coses que mostrare a continuació:
 * Pagina home del usuari amb una llista de les empreses, aquesta llista dona diferent informació està feta amb VUE i extreu la informació de la BD
 * He començata a fer que l'uauari es puge descarregar informació de la api
-## 24/5/16
+## 24/05/16
 Avui he fet una comanda que passa la taula de valors de mercats historics de la bd a diferents formats per que posteriorment l'usuari puge descarregar-sels. He utilitzat la llibreria Laravel Formatter
 
 També he creat la pagina per descarregar la informació que es mostra a la web.
 
 I per ultim he començat a fer la pagina que s'encarrega de fer els calculs de moment nomes tinc el formulari falta tota la "xixa"
+## 25/05/16
+Ja tinc feta la pagina de calculadora amb HTML5 i JS també  he comançat a fer la api per guardar els caluls
+## 26/05/16
+Avui he continualt la API per emmagatzemar els calculs hi també m'he donat conte que els que hem sumbministren la informació es a dir l'api de tercers ha ficat proteció per atacs DDos per aixó tindre que modificar les comandes que fins ara m'omplien la BD d'informació
+## 27/05/16
+Ja tinc acabades les mesures per evitar la protexió contra atacs DDos
+Despres d'aixó he continuat amb la API per emmagatzemar els calculs
