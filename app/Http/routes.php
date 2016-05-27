@@ -17,8 +17,17 @@ Route::get('/', function () {
 
 Route::get('test', 'testController@testMethod');
 
+/**
+ * Route Download Information
+*/
 Route::get('download_info', 'DownloadInfoController@index');
 
+
+/**
+ * Routes Calculator
+ */
 Route::get('calc', 'CalculatorController@index');
 
-Route::post('calc/save','CalculatorController@store');
+Route::group(['prefix' => 'api/'], function () {
+    Route::post('calc/save', 'CalculatorController@store');
+});

@@ -1,7 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alumne
- * Date: 26/05/16
- * Time: 19:57
- */
+
+namespace App\Http\Transformers;
+
+abstract class Transformer
+{
+    public function transformCollection(array $items)
+    {
+        return array_map([$this, 'transform'], $items);
+    }
+
+    abstract public function transform($item);
+}

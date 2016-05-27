@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Chrisbjr\ApiGuard\Models\ApiKey;
 
 class AuthController extends Controller
 {
@@ -63,10 +64,21 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user =  User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        $user->apiKey = $this->createUserApiKey($user);
+
+        return $user;
     }
+
+    private function createUserApiKey(User $user)
+    {
+        $apiKey = ApiKey::make($user->id);
+        $apiKey->save();
+        return $apiKey->key;
+     }
 }

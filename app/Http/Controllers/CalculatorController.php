@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Http\Transformers\CalculatorTransformer;
 use App\Http\Requests;
 
 /**
@@ -13,12 +12,12 @@ use App\Http\Requests;
 class CalculatorController extends Controller
 {
 
-
     /**
-     * CalculatorController constructor.
+     * CalculatorController constructor
      */
     public function __construct()
     {
+
         $this->middleware('auth');
     }
 
@@ -29,16 +28,5 @@ class CalculatorController extends Controller
     {
         return view('calculator');
     }
-
-    /**
-     *Store calculator data in DB
-     * @param Request $request
-     */
-    public function store(Request $request)
-    {
-
-    }
-
-
 
 }

@@ -160,6 +160,9 @@ return [
          * Acacha AdminLTE template provider
          */
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+
+
+        Chrisbjr\ApiGuard\Providers\ApiGuardServiceProvider::class,
     ],
 
     /*
@@ -211,6 +214,7 @@ return [
          */
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
 
+        'ApiGuardAuth' => \Chrisbjr\ApiGuard\Facades\ApiGuardAuth::class,
     ],
 
 ];

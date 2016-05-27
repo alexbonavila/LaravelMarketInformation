@@ -38,6 +38,9 @@ class CreateSimulatorHistoryTable extends Migration
      */
     public function down()
     {
+        Schema::table('simulator_history', function(Blueprint $table) {
+            $table->dropForeign('simulator_history_user_id_foreign');
+        });
         Schema::drop('simulator_history');
     }
 }

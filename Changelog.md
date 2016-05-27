@@ -41,4 +41,4 @@ Ja tinc feta la pagina de calculadora amb HTML5 i JS també  he comançat a fer 
 Avui he continualt la API per emmagatzemar els calculs hi també m'he donat conte que els que hem sumbministren la informació es a dir l'api de tercers ha ficat proteció per atacs DDos per aixó tindre que modificar les comandes que fins ara m'omplien la BD d'informació
 ## 27/05/16
 Ja tinc acabades les mesures per evitar la protexió contra atacs DDos
-Despres d'aixó he continuat amb la API per emmagatzemar els calculs
+Despres d'aixó he continuat amb la API per emmagatzemar els calculs i ja tinc la api feta i els testos per provar-la
