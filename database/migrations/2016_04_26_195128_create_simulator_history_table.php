@@ -14,7 +14,11 @@ class CreateSimulatorHistoryTable extends Migration
     {
         Schema::create('simulator_history', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_id');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+            $table->string('name');
             $table->float('quantity_to_buy');
             $table->float('quote_to_buy');
             $table->float('price_to_buy');
