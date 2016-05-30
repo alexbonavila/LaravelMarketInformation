@@ -17,6 +17,8 @@ class HttpGetsTest extends TestCase
 
         $glz_cli = new Client();
 
+        sleep(4);
+
         $interaction_methods->companyLookup($glz_cli,"AAPL");
     }
 
@@ -26,6 +28,8 @@ class HttpGetsTest extends TestCase
 
         $glz_cli = new Client();
 
+        sleep(4);
+
         $interaction_methods->stockQuote($glz_cli,"AAPL");
     }
 
@@ -34,6 +38,8 @@ class HttpGetsTest extends TestCase
         $interaction_methods = new GetMethods();
 
         $glz_cli = new Client();
+
+        sleep(4);
 
         $interaction_methods->stockQuote($glz_cli,"AAPL");
     }

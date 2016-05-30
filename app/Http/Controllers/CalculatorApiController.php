@@ -22,12 +22,14 @@ class CalculatorApiController extends ApiGuardController
      * @var CalculatorTransformer
      */
     protected $calcul_transformer;
+
+    protected $calculator;
     /**
      * @var array
      */
     protected $apiMethods = [
         'store' =>[
-            'keyAuthentication' => false
+            'keyAuthentication' => true
         ]
     ];
 
@@ -35,12 +37,14 @@ class CalculatorApiController extends ApiGuardController
      * CalculatorController constructor.
      * @param CalculatorTransformer $calcul_transformer
      */
-    public function __construct(CalculatorTransformer $calcul_transformer)
+    public function __construct(CalculatorTransformer $calcul_transformer, User $user, SimulatorHistory $calculator)
     {
         parent::__construct();
 
 
         $this->calcul_transformer = $calcul_transformer;
+        $this->user = $user;
+        $this->calculator = $calculator;
     }
 
     /**
@@ -52,22 +56,23 @@ class CalculatorApiController extends ApiGuardController
     {
         $user = Auth::user();
 
+        $calcul = array(
+            'user_id' => $user->id,
+            'name' => $request->input('name'),
+            'quantity_to_buy' => $request->input('quantity_to_buy'),
+            'quote_to_buy' => $request->input('quote_to_buy'),
+            'price_to_buy' => $request->input('price_to_buy'),
+            'quantity_to_sell' => $request->input('quantity_to_sell'),
+            'quote_to_sell' => $request->input('quote_to_sell'),
+            'tax_percent_to_discount' => $request->input('tax_percent_to_discount'),
+            'price_to_sell' => $request->input('name'),
+            'gains_or_losses' => $request->input('name'),
+        );
 
-        $calcul = new SimulatorHistory();
-        $calcul->user_id = Input::get('user_id');
-        $calcul->name = Input::get('name');
-        $calcul->quantity_to_buy = Input::get('quantity_to_buy');
-        $calcul->quote_to_buy = Input::get('quote_to_buy');
-        $calcul->price_to_buy = Input::get('price_to_buy');
-        $calcul->quantity_to_sell = Input::get('quantity_to_sell');
-        $calcul->quote_to_sell = Input::get('quote_to_sell');
-        $calcul->tax_percent_to_discount = Input::get('tax_percent_to_discount');
-        $calcul->price_to_sell = Input::get('price_to_sell');
-        $calcul->gains_or_losses = Input::get('gains_or_losses');
 
+        $this->calculator->create($calcul);
 
-        $user->getCalculations()->save($calcul);
-        return $this->response->withItem($calcul,$this->calcul_transformer);
+       return $this->response->withItem($calcul, $this->calcul_transformer);
     }
 
 
