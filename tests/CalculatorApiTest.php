@@ -18,16 +18,6 @@ class CalculatorApiTest extends TestCase
     use DatabaseMigrations;
 
     /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $this->assertTrue(true);
-    }
-
-    /**
      * Create fake user
      *
      * @return mixed
