@@ -33,7 +33,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-        //$schedule->command('companies_table:feed')->DefineTime;
+        $schedule->command('companies_table:feed')->monthly();
         $schedule->command('history_table:feed')->monthly();
         $schedule->command('file_creator:create')->monthly();
 
