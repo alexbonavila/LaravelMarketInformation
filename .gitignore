@@ -5,3 +5,4 @@ Homestead.yaml
 Homestead.json
 .env
 .idea/
+/public/historic_info_files/

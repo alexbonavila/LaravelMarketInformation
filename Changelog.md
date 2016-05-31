@@ -42,3 +42,7 @@ Avui he continualt la API per emmagatzemar els calculs hi també m'he donat cont
 ## 27/05/16
 Ja tinc acabades les mesures per evitar la protexió contra atacs DDos
 Despres d'aixó he continuat amb la API per emmagatzemar els calculs i ja tinc la api feta i els testos per provar-la
+## 28/05/16 i 19/05/16
+Aquest fi de setmana he acabat de pulir la api i també he afegit mes testos
+## 30/05/16
+Avui dilluns he separat les rutes de les api de les web per no fer servir el mateix middlewware i per millorar l'organització, a continuació he deixat al 100% l'store de la calculadora , també he fet mes testos i per ultim he planificat quan i amb quina frequenciá s'executaran les tasques d'scheduler
