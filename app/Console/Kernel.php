@@ -21,6 +21,7 @@ class Kernel extends ConsoleKernel
         Commands\CompaniesTableFeeder::class,
         Commands\ExchangeHistoryTableFeeder::class,
         Commands\DBToFile::class,
+        Commands\CompanyFollowTableFeeder::class,
     ];
 
     /**
@@ -33,9 +34,10 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-        $schedule->command('companies_table:feed')->monthly();
-        $schedule->command('history_table:feed')->monthly();
-        $schedule->command('file_creator:create')->monthly();
+        $schedule->command('companies_table:feed')->cron('0 23 * * 0');
+        $schedule->command('history_table:feed')->cron('15 23 * * 0');
+        $schedule->command('file_creator:create')->cron('30 23 * * 0');
+        $schedule->command('company_follow:feed')->everyFiveMinutes();
 
     }
 }

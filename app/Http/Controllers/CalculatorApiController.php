@@ -23,6 +23,9 @@ class CalculatorApiController extends ApiGuardController
      */
     protected $calcul_transformer;
 
+    /**
+     * @var SimulatorHistory
+     */
     protected $calculator;
     /**
      * @var array
@@ -36,6 +39,8 @@ class CalculatorApiController extends ApiGuardController
     /**
      * CalculatorController constructor.
      * @param CalculatorTransformer $calcul_transformer
+     * @param User $user
+     * @param SimulatorHistory $calculator
      */
     public function __construct(CalculatorTransformer $calcul_transformer, User $user, SimulatorHistory $calculator)
     {

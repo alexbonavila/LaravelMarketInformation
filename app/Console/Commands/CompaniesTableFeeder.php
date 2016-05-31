@@ -2,10 +2,11 @@
 
 namespace App\Console\Commands;
 
-use App\InteractionMethodsMOD\GetMethods;
-use Carbon\Carbon;
+use App\Console\AuxiliaryClasses\DataBaseFunctions;
+use App\Console\AuxiliaryClasses\HttpCalls;
+use App\Console\AuxiliaryClasses\ProgressControl;
 use DB;
-use GuzzleHttp\Client;
+use Exception;
 use Illuminate\Console\Command;
 
 /**
@@ -14,6 +15,23 @@ use Illuminate\Console\Command;
  */
 class CompaniesTableFeeder extends Command
 {
+
+
+    /**
+     * @var DataBaseFunctions
+     */
+    protected $db_functions;
+
+    /**
+     * @var HttpCalls
+     */
+    protected $http_calls;
+
+    /**
+     * @var ProgressControl
+     */
+    protected $progress_control;
+
     /**
      * The name and signature of the console command.
      *
@@ -30,11 +48,18 @@ class CompaniesTableFeeder extends Command
 
     /**
      * Create a new command instance.
-     *
+     * @param DataBaseFunctions $db_functions
+     * @param HttpCalls $http_calls
+     * @param ProgressControl $progress_control
      */
-    public function __construct()
+    public function __construct(DataBaseFunctions $db_functions,HttpCalls $http_calls,ProgressControl $progress_control)
     {
         parent::__construct();
+
+        $this->db_functions=$db_functions;
+        $this->http_calls=$http_calls;
+        $this->progress_control=$progress_control;
+
     }
 
     /**
@@ -44,96 +69,27 @@ class CompaniesTableFeeder extends Command
      */
     public function handle()
     {
-        $this->getSymbolsFormArray();
-    }
+        $table='companies';
 
-    /**
-     *
-     */
-    public function getSymbolsFormArray()
-    {
-        DB::table('companies')->truncate();
+        DB::table($table)->truncate();
 
         $symbols_nasdq= '{"SymbolsNASDAQ":["AAL","AAPL","ADBE","ADI","ADP","ADSK","AKAM","ALXN","AMAT","AMGN","AMZN","ATVI","BBBY","BIDU","BIIB","BMRN","CA","CELG","CERN","CHKP","CHTR","CMCSA","COST","CSCO","CSX","CTRP","CTSH","CTXS","DISCA","DISCK","DISH","DLTR","EA","EBAY","ENDP","ESRX","EXPE","FAST","FB","FISV","FOX","FOXA","GILD","GOOG","GOOGL","HSIC","INCY","INTC","INTU","ILMN","ISRG","JD","KHC","LBTYA","LBTYK","LLTC","LMCA","LRCX","LVNTA","MAR","MAT","MDLZ","MNST","MSFT","MU","MXIM","MYL","NCLH","NFLX","NTAP","NVDA","NXPI","ORLY","PAYX","PCAR","PCLN","PYPL","QCOM","QVCA","REGN","ROST","SBAC","SBUX","SIRI","SNDK","SRCL","STX","SWKS","SYMC","TMUS","TSCO","TSLA","TRIP","TXN","ULTA","VIAB","VOD","VRSK","VRTX","WBA","WDC","WFM","XLNX","YHOO"]}';
 
         $symbols_nasdq = json_decode($symbols_nasdq);
 
-        $symbols_nasdq = $symbols_nasdq->SymbolsNASDAQ;
+        $symbols = $symbols_nasdq->SymbolsNASDAQ;
 
-        for($i=0; $i<count($symbols_nasdq); $i++)
-        {
-            $symbol=$symbols_nasdq[$i];
-            $gm = new GetMethods();
-            $this->httpCall($gm,$symbol);
+        for($i=0; $i<count($symbols); $i++){
+            try{
+                $symbol=$symbols[$i];
+                $data=$this->http_calls->getCompanies($symbol);
+                $this->db_functions->storeCompanies($data);
+                $this->progress_control->progressControl($i);
 
-            sleep(4);
+            }catch(Exception $e){
 
-            switch($i){
-                case 0:
-                    echo "0%\n";
-                    break;
-                case 24:
-                    echo "25%\n";
-                    break;
-                case 49:
-                    echo "50%\n";
-                    break;
-                case 74:
-                    echo "75%\n";
             }
         }
-        echo("100 % Table companies fed\n");
-
+        echo("100% Table companies fed\n");
     }
-
-    /**
-     * @param GetMethods $interaction_methods
-     * @param $symbol
-     */
-    public function httpCall(GetMethods $interaction_methods, $symbol)
-    {
-        $glz_cli=new Client();
-
-        $data = $interaction_methods->companyLookup($glz_cli,$symbol);
-
-        $this->discardRepeated($data,$symbol);
-
-    }
-
-    /**
-     * @param $data
-     * @param $symbol
-     */
-    public function discardRepeated($data, $symbol)
-    {
-        for($i=0;$i<count($data);$i++){
-
-            $symbol_to_compare=(string) $data[$i]->Symbol;
-
-            if($symbol_to_compare==$symbol){
-
-                $node=$data[$i];
-
-                $this->storeDataInDB($node);
-            }
-        }
-    }
-
-    /**
-     * @param $data
-     */
-    public function storeDataInDB($data)
-    {
-        DB::table('companies')->insert([
-            [
-                'symbol' => $data->Symbol,
-                'name' => $data->Name,
-                'exchange' => $data->Exchange,
-                'created_at' => Carbon::now()->toDateTimeString(),
-                'updated_at' => Carbon::now()->toDateTimeString()
-            ]
-        ]);
-    }
-
-
 }

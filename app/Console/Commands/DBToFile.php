@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Console\AuxiliaryClasses\DataBaseFunctions;
 use DB;
 use Illuminate\Console\Command;
 use SoapBox\Formatter\Formatter;
@@ -12,6 +13,10 @@ use SoapBox\Formatter\Formatter;
  */
 class DBToFile extends Command
 {
+    /**
+     * @var DataBaseFunctions
+     */
+    protected $db_functions;
     /**
      * The name and signature of the console command.
      *
@@ -28,11 +33,14 @@ class DBToFile extends Command
 
     /**
      * Create a new command instance.
-     *
+     * @param DataBaseFunctions $db_functions
      */
-    public function __construct()
+    public function __construct(DataBaseFunctions $db_functions)
     {
         parent::__construct();
+
+        $this->db_functions=$db_functions;
+
     }
 
     /**
@@ -42,7 +50,7 @@ class DBToFile extends Command
      */
     public function handle()
     {
-        $exchange_history = $this->getDataFromBD();
+        $exchange_history = $this->db_functions->getAllDataFromExchangeHistory();
 
         for($i=0; $i<count($exchange_history); $i++)
         {
@@ -50,6 +58,8 @@ class DBToFile extends Command
 
             $this->transformData($company_history);
         }
+
+        echo ("The files have been created successfully\n");
 
     }
 
@@ -90,17 +100,5 @@ class DBToFile extends Command
         fwrite($myfile, json_encode($to_store));
         fclose($myfile);
     }
-
-    /**
-     * @return array|static[]
-     */
-    public function getDataFromBD()
-    {
-        $company_history = DB::table('exchange_history')->get();
-
-        return $company_history;
-    }
-    
-    
     
 }

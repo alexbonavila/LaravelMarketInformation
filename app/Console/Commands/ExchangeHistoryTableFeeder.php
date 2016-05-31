@@ -2,6 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Console\AuxiliaryClasses\DataBaseFunctions;
+use App\Console\AuxiliaryClasses\HttpCalls;
+use App\Console\AuxiliaryClasses\ProgressControl;
 use App\InteractionMethodsMOD\GetMethods;
 use Carbon\Carbon;
 use DB;
@@ -15,6 +18,21 @@ use Symfony\Component\Config\Definition\Exception\Exception;
  */
 class ExchangeHistoryTableFeeder extends Command
 {
+    /**
+     * @var DataBaseFunctions
+     */
+    protected $db_functions;
+
+    /**
+     * @var HttpCalls
+     */
+    protected $http_calls;
+
+    /**
+     * @var ProgressControl
+     */
+    protected $progress_control;
+
     /**
      * The name and signature of the console command.
      *
@@ -31,12 +49,20 @@ class ExchangeHistoryTableFeeder extends Command
 
     /**
      * Create a new command instance.
-     *
+     * @param DataBaseFunctions $db_functions
+     * @param HttpCalls $http_calls
+     * @param ProgressControl $progress_control
      */
-    public function __construct()
+    public function __construct(DataBaseFunctions $db_functions,HttpCalls $http_calls,ProgressControl $progress_control)
     {
         parent::__construct();
+
+        $this->db_functions=$db_functions;
+        $this->http_calls=$http_calls;
+        $this->progress_control=$progress_control;
+
     }
+
 
     /**
      * Execute the console command.
@@ -45,85 +71,22 @@ class ExchangeHistoryTableFeeder extends Command
      */
     public function handle()
     {
-        $this->getSymbolsFormDB();
-    }
+        $table='exchange_history';
 
-    /**
-     *Elimina les dades antigues i n'insereix unes de noves
-     */
-    public function getSymbolsFormDB()
-    {
-        DB::table('exchange_history')->truncate();
+        $symbols=$this->db_functions->truncateBDValuesAndGetNew($table);
 
-        $symbols = DB::table('companies')->select('symbol')->get();
+        for($i=0; $i<count($symbols); $i++){
+            try{
 
+                $symbol=$symbols[$i]->symbol;
+                $data=$this->http_calls->getExchangeHistory($symbol);
+                $this->db_functions->storeExchangeHistory($data,$table);
+                $this->progress_control->progressControl($i);
 
-            for($i=0; $i<count($symbols); $i++)
-            {
-                try{
-                    $symbol=$symbols[$i]->symbol;
-                    $gm = new GetMethods();
-                    $this->httpCall($gm,$symbol);
-
-                    sleep(4);
-                }catch(Exception $e){}
-
-                switch($i){
-                    case 0:
-                        echo "0%\n";
-                        break;
-                    case 24:
-                        echo "25%\n";
-                        break;
-                    case 49:
-                        echo "50%\n";
-                        break;
-                    case 74:
-                        echo "75%\n";
-                }
+            }catch(Exception $e){
 
             }
-
-            echo("100% Table exchange_history fed\n");
+        }
+        echo("100% Table exchange_history fed\n");
     }
-
-    /**
-     * Aconegueix les dades de la api i fa la crida de la funció que les guardara a la BD
-     *
-     * @param GetMethods $interaction_methods
-     * @param $symbol
-     */
-    public function httpCall(GetMethods $interaction_methods, $symbol)
-    {
-        $glz_cli=new Client();
-
-        $data = $interaction_methods->interactiveChart($glz_cli,$symbol);
-
-        $this->storeDataInDB($data);
-    }
-
-    /**
-     *
-     * Persisteix les dades al MYSQL
-     *
-     * @param $data
-     */
-    public function storeDataInDB($data)
-    {
-        DB::table('exchange_history')->insert([
-            [
-                'symbol' => $data->Elements[0]->Symbol,
-                'positions' => json_encode($data->Positions),
-                'dates' => json_encode($data->Dates),
-                'values' => json_encode($data->Elements[0]->DataSeries->close->values),
-                'max_date' =>  $data->Elements[0]->DataSeries->close->maxDate,
-                'min_date' => $data->Elements[0]->DataSeries->close->minDate,
-                'min_value' => $data->Elements[0]->DataSeries->close->min,
-                'max_value' =>  $data->Elements[0]->DataSeries->close->max,
-                'created_at' => Carbon::now()->toDateTimeString(),
-                'updated_at' => Carbon::now()->toDateTimeString()
-            ]
-        ]);
-    }
-
 }
