@@ -19,4 +19,5 @@ elixir(function(mix) {
     mix.less('bootstrap/bootstrap.less');
     mix.less('grid-style/grid.less');
     mix.browserify('main.js');
+    mix.scripts(['save_calc.js']);
 });

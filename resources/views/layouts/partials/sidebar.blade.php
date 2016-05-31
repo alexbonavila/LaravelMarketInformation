@@ -23,7 +23,7 @@
             <li class="header">Menu</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>Home</span></a></li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>En viu</span></a></li>
+            <li><a href="{{ url('live') }}"><i class='fa fa-link'></i> <span>En viu</span></a></li>
             <li><a href="#"><i class='fa fa-link'></i> <span>Historic</span></a></li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>Eines</span> <i class="fa fa-angle-left pull-right"></i></a>

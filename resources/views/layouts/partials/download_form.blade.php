@@ -15,6 +15,8 @@
 
         <a type="button"
            class="btn btn-primary btn-bg"
+           name="Download"
+           id="Download"
            href="http://localhost:8000/historic_info_files/@{{ extension }}/@{{ symbol }}.@{{ extension }}"
            download="@{{ symbol }}.@{{ extension }}">
             Download

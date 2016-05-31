@@ -31,3 +31,5 @@ $('.form-calc-save button[type=submit]').click(function(e){
         }
     });
 });
+
+//# sourceMappingURL=all.js.map
