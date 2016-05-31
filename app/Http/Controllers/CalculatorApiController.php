@@ -70,8 +70,8 @@ class CalculatorApiController extends ApiGuardController
             'quantity_to_sell' => $request->input('quantity_to_sell'),
             'quote_to_sell' => $request->input('quote_to_sell'),
             'tax_percent_to_discount' => $request->input('tax_percent_to_discount'),
-            'price_to_sell' => $request->input('name'),
-            'gains_or_losses' => $request->input('name'),
+            'price_to_sell' => $request->input('price_to_sell'),
+            'gains_or_losses' => $request->input('gains_or_losses'),
         );
 
 
