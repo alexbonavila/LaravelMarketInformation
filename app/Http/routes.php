@@ -27,6 +27,7 @@ Route::get('download_info', 'DownloadInfoController@index');
  * Route Calculator
  */
 Route::get('calc', 'CalculatorController@index');
+Route::get('calc/history','CalculatorHistoryController@index');
 
 /**
  * Route In live
