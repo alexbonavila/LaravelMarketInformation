@@ -14,9 +14,12 @@ class CreateCompanyFollowTable extends Migration
     {
         Schema::create('company_follow', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_email');
-            $table->Text('company_symbols');
-            $table->string('frequency');
+            $table->string('Symbol');
+            $table->string('Name');
+            $table->string('LastPrice');
+            $table->string('Change');
+            $table->string('Volume');
+            $table->string('Open');
             $table->timestamps();
         });
     }
