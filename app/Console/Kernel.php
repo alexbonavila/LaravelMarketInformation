@@ -37,7 +37,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('companies_table:feed')->cron('0 23 * * 0');
         $schedule->command('history_table:feed')->cron('15 23 * * 0');
         $schedule->command('file_creator:create')->cron('30 23 * * 0');
-        $schedule->command('company_follow:feed')->everyFiveMinutes();
+        $schedule->command('company_follow:feed')->everyThirtyMinutes();
 
     }
 }
