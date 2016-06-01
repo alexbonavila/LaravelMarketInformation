@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import Graph from './components/Graph';
+
 
 // register the grid component
 Vue.component('demo-grid', {
@@ -41,4 +43,10 @@ new Vue({
         symbol: '',
         extension: ''
     }
+});
+
+new Vue({
+    el: 'body',
+
+    components: { Graph }
 });

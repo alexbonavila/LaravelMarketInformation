@@ -1,3 +1,8 @@
-<div class="container">
-    <canvas id="graph" width="600" height="400"></canvas>
-</div>
+   <div class="container">
+       <graph :labels="['January', 'February', 'March']"
+              :values="[10, 20, 4]"
+              color="blue"
+       ></graph>
+   </div>
+   </div>
+

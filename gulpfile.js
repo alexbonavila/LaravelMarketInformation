@@ -19,6 +19,5 @@ elixir(function(mix) {
     mix.less('bootstrap/bootstrap.less');
     mix.less('grid-style/grid.less');
     mix.browserify('main.js');
-    mix.browserify('graph_vue.js');
     mix.scripts(['save_calc.js']);
 });
