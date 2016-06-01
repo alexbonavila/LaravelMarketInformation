@@ -10,19 +10,6 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class HttpGetsTest extends TestCase
 {
 
-    protected $get_methods;
-
-    /**
-     * HttpGetsTest constructor.
-     */
-    public function __construct(GetMethods $get_methods)
-    {
-        parent::__construct();
-
-        $this->get_methods=$get_methods;
-    }
-
-
     /**
      * A basic test example.
      *
@@ -34,24 +21,24 @@ class HttpGetsTest extends TestCase
     }
 
 
-    public function testCompanyLookup()
+    public function testCompanyLookup(GetMethods $get_methods)
     {
         sleep(4);
 
-        $this->get_methods->companyLookup("AAPL");
+        $get_methods->companyLookup("AAPL");
     }
 
-    public function testStockQuote()
+    public function testStockQuote(GetMethods $get_methods)
     {   sleep(4);
 
-        $this->get_methods->stockQuote("AAPL");
+        $get_methods->stockQuote("AAPL");
     }
 
-    public function testInteractiveChart()
+    public function testInteractiveChart(GetMethods $get_methods)
     {
         sleep(4);
 
-        $this->get_methods->stockQuote("AAPL");
+        $get_methods->stockQuote("AAPL");
     }
 
 }
