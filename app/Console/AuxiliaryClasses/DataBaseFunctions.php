@@ -41,7 +41,7 @@ class DataBaseFunctions
                 'symbol' => $data->Symbol,
                 'name' => $data->Name,
                 'lastPrice' => $data->LastPrice,
-                'change' => $data->Change,
+                'change' => round($data->Change, 2),
                 'volume' => $data->Volume,
                 'open' => $data->Open,
                 'created_at' => Carbon::now()->toDateTimeString(),
