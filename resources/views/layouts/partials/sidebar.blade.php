@@ -25,7 +25,7 @@
             <li><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>Home</span></a></li>
             <li><a href="{{ url('live') }}"><i class='fa fa-link'></i> <span>En viu</span></a></li>
             <li><a href="#"><i class='fa fa-link'></i> <span>Historic</span></a></li>
-            <li><a href="{{ url('download_info') }}"><i class='fa fa-link'></i>Descarregar informació</a></li>
+            <li><a href="{{ url('download_info') }}"><i class='fa fa-link'></i><span>Descarregar informació</span></a></li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>Simulador/Calculadora</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
