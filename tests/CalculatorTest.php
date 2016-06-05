@@ -15,23 +15,4 @@ class CalculatorTest extends TestCase
             ->seePageIs('/login');
     }
 
-    public function testCalculatorPageRegisteredUser()
-    {
-        $user = factory(App\User::class)->create();
-
-        $this->actingAs($user)
-            ->visit('/calc')
-            ->see($user->email);
-    }
-
-    public function testFormCalculatorPage()
-    {
-        $user = factory(App\User::class)->create();
-        $this->actingAs($user)
-            ->visit('/calc');
-        //TODO
-
-    }
-    
-    
 }

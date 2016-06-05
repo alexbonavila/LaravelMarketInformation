@@ -68,5 +68,4 @@ class CalculatorApiTest extends TestCase
         $user->getCalculations()->save($calcul);
         return $calcul;
     }
-
 }
