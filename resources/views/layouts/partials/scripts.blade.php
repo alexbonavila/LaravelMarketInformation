@@ -7,9 +7,9 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('/js/app.min.js') }}" type="text/javascript"></script>
 
-<script src="{{'js/main.js'}}"></script>
-<script src="{{'js/all.js'}}"></script>
-<script src="{{'js/graph_vue.js'}}"></script>
+<script src="{{asset('js/main.js')}}"></script>
+<script src="{{asset('js/all.js')}}"></script>
+{{--<script src="{{'js/graph_vue.js'}}"></script>--}}
 
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.

@@ -37,4 +37,4 @@ Route::get('live', 'LiveInfoController@index');
 /**
  * Route History
  */
-Route::get('history', 'HistoryController@index');
+Route::get('history/{id}', 'HistoryController@index');

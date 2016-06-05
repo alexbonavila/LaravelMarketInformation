@@ -12,7 +12,10 @@ export default {
     },
 
     ready() {
-        var data = {
+
+        var y_axis;
+
+        var data1 = {
             labels: this.labels,
 
             datasets: [
@@ -28,7 +31,7 @@ export default {
             ]
         };
 
-        new Chart( this.$el.getContext('2d'), { type: "line", data: data});
+        new Chart( this.$el.getContext('2d'), { type: "line", data: data1});
 
     }
 }

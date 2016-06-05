@@ -23978,7 +23978,10 @@ exports.default = {
     },
 
     ready: function ready() {
-        var data = {
+
+        var y_axis;
+
+        var data1 = {
             labels: this.labels,
 
             datasets: [{
@@ -23992,7 +23995,7 @@ exports.default = {
             }]
         };
 
-        new _chart2.default(this.$el.getContext('2d'), { type: "line", data: data });
+        new _chart2.default(this.$el.getContext('2d'), { type: "line", data: data1 });
     }
 };
 

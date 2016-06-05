@@ -1,8 +1,20 @@
-   <div class="container">
-       <graph :labels="['January', 'February', 'March']"
-              :values="[10, 20, 4]"
-              color="blue"
-       ></graph>
-   </div>
-   </div>
+<div id="get_history">
+        <div class="col-xs-2">
+            <input type="text" class="form-control" name="symbol_query" id="symbol_query" placeholder="Symbol Company">
+        </div>
+        <button type="submit" name="get_info" id="get_info" class="btn btn-default" onclick="redirect()">Consulta</button>
+</div>
+<div class="container">
+    <graph :labels="{{$dates}}"
+           :values="{{$values}}"
+           color="blue"
+    ></graph>
+</div>
 
+<script>
+    function redirect(){
+        var input=document.getElementById("symbol_query").value;
+        var str=String(input);
+        window.location="http://localhost:8000/history/".concat(str);
+    }
+</script>

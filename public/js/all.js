@@ -20,7 +20,7 @@ $('.form-calc-save button[type=submit]').click(function(e){
         success: function(data) {
             $('#loading').remove();
             $('#save_button').text('Guarda');
-            $('#response').append(' <div class="alert alert-info"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>El calcul ha sigut guardat correctament</div>')
+            $('#response').append('<div class="alert alert-info"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>El calcul ha sigut guardat correctament</div>')
             console.log(data);
         },
         error: function(data){
@@ -31,5 +31,7 @@ $('.form-calc-save button[type=submit]').click(function(e){
         }
     });
 });
+
+
 
 //# sourceMappingURL=all.js.map
