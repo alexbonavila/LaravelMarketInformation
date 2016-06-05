@@ -6,6 +6,7 @@ use App\Http\Transformers\CalculatorTransformer;
 use App\SimulatorHistory;
 use App\User;
 use Chrisbjr\ApiGuard\Http\Controllers\ApiGuardController;
+use DB;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
@@ -32,6 +33,9 @@ class CalculatorApiController extends ApiGuardController
      */
     protected $apiMethods = [
         'store' =>[
+            'keyAuthentication' => true
+        ],
+        'getUserCalculs' =>[
             'keyAuthentication' => true
         ]
     ];
@@ -80,6 +84,14 @@ class CalculatorApiController extends ApiGuardController
        return $this->response->withItem($calcul, $this->calcul_transformer);
     }
 
+    public function getUserCalculs()
+    {
+        $user = Auth::user();
+
+        $data = DB::table('simulator_history')->where('user_id','=',$user->id)->get();
+
+        return $data;
+    }
 
 
 }

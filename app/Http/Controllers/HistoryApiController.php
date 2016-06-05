@@ -12,25 +12,38 @@ class HistoryApiController extends ApiGuardController
 {
 
     protected $apiMethods = [
-        'getYAxisRaw' =>[
+        'getHistoryWithSymbol' =>[
+            'keyAuthentication' => true
+        ],
+        'getHistoryOnlyDatesAndValues'=>[
             'keyAuthentication' => true
         ]
     ];
 
 
-    public function getYAxisRaw(Request $request)
+    public function getHistoryWithSymbol(Request $request)
     {
         $symbol=$request->symbol_query;
 
-        $query = DB::table('exchange_history')->select('values')->where('symbol','=',$symbol)->get();
-
-        $query=$query[0]->values;
-
-        $query=json_encode($query);
-
-        $to_replace = array("[", "]");
-        $query=str_replace($to_replace,"",$query);
+        $query = DB::table('exchange_history')
+            ->where('symbol','=',$symbol)
+            ->get();
 
         return $query;
     }
+
+    public function getHistoryOnlyDatesAndValues(Request $request)
+    {
+        $symbol=$request->symbol_query;
+
+        $query = DB::table('exchange_history')
+            ->select('symbol','dates','values')
+            ->where('symbol','=',$symbol)
+            ->get();
+
+        return $query;
+    }
+
+
+
 }
