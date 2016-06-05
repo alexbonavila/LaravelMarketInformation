@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', 'testController@testMethod');
+Route::get('profile', 'ProfileController@index');
 
 /**
  * Route Download Information
