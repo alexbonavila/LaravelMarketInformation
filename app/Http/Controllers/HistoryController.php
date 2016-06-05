@@ -16,10 +16,11 @@ class HistoryController extends Controller
             ->where("symbol","=",$id)
             ->get();
 
+        $symbol= $query[0]->symbol;
         $dates= $query[0]->dates;
         $values= $query[0]->values;
 
-        return view('history', ['dates' => $dates, 'values'=> $values]);
+        return view('history', ['dates' => $dates, 'values'=> $values,'symbol'=> $symbol]);
     }
 
 

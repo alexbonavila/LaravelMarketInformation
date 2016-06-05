@@ -6,14 +6,10 @@ export default {
     props: {
         labels: {},
         values: {},
-        color: {
-            default: 'rgba(220,220,220,0.2)'
-        }
+        color: {}
     },
 
     ready() {
-
-        var y_axis;
 
         var data1 = {
             labels: this.labels,
@@ -21,11 +17,6 @@ export default {
             datasets: [
                 {
                     fillColor: this.color,
-                    strokeColor: "rgba(220,220,220,1)",
-                    pointColor: "rgba(220,220,220,1)",
-                    pointStrokeColor: "#fff",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(220,220,220,1)",
                     data: this.values
                 }
             ]

@@ -3,6 +3,7 @@
             <input type="text" class="form-control" name="symbol_query" id="symbol_query" placeholder="Symbol Company">
         </div>
         <button type="submit" name="get_info" id="get_info" class="btn btn-default" onclick="redirect()">Consulta</button>
+        <h3><span class="label label-primary big">{{$symbol}}</span></h3>
 </div>
 <div class="container">
     <graph :labels="{{$dates}}"
