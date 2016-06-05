@@ -84,6 +84,9 @@ class CalculatorApiController extends ApiGuardController
        return $this->response->withItem($calcul, $this->calcul_transformer);
     }
 
+    /**
+     * @return array|static[]
+     */
     public function getUserCalculs()
     {
         $user = Auth::user();

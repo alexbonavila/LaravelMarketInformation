@@ -10,6 +10,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class HttpGetsTest extends TestCase
 {
 
+
     /**
      * A basic test example.
      *
@@ -21,21 +22,28 @@ class HttpGetsTest extends TestCase
     }
 
 
-    public function testCompanyLookup(GetMethods $get_methods)
+    public function testCompanyLookup()
     {
+        $get_methods= new GetMethods(new Client());
+
         sleep(4);
 
         $get_methods->companyLookup("AAPL");
     }
 
-    public function testStockQuote(GetMethods $get_methods)
-    {   sleep(4);
+    public function testStockQuote()
+    {
+        $get_methods= new GetMethods(new Client());
+
+        sleep(4);
 
         $get_methods->stockQuote("AAPL");
     }
 
-    public function testInteractiveChart(GetMethods $get_methods)
+    public function testInteractiveChart()
     {
+        $get_methods= new GetMethods(new Client());
+
         sleep(4);
 
         $get_methods->stockQuote("AAPL");

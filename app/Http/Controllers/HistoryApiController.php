@@ -8,9 +8,16 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+/**
+ * Class HistoryApiController
+ * @package App\Http\Controllers
+ */
 class HistoryApiController extends ApiGuardController
 {
 
+    /**
+     * @var array
+     */
     protected $apiMethods = [
         'getHistoryWithSymbol' =>[
             'keyAuthentication' => true
@@ -21,6 +28,10 @@ class HistoryApiController extends ApiGuardController
     ];
 
 
+    /**
+     * @param Request $request
+     * @return array|static[]
+     */
     public function getHistoryWithSymbol(Request $request)
     {
         $symbol=$request->symbol_query;
@@ -32,6 +43,10 @@ class HistoryApiController extends ApiGuardController
         return $query;
     }
 
+    /**
+     * @param Request $request
+     * @return array|static[]
+     */
     public function getHistoryOnlyDatesAndValues(Request $request)
     {
         $symbol=$request->symbol_query;

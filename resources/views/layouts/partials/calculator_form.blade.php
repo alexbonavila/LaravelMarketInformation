@@ -1,7 +1,9 @@
 <form name="calculadora" class="form-calc-save" id="form-calc-save" role="form" method="post" action="api/calc/save">
     <div class="row">
+        @if (Auth::guest())
+        @else
         <input type="hidden" id="api_key" name="api_key" content="{{ Auth::user()->apiKey->key }}" disabled>
-
+        @endif
         <div class="col-xs-4">
             <input type="text" class="form-control" placeholder={{ Auth::user()->email}} disabled>
         </div>
