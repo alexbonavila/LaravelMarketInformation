@@ -14,9 +14,7 @@
         "phpunit/php-code-coverage": "^2.2",
         "satooshi/php-coveralls": "^1.0",
         "soapbox/laravel-formatter": "^2.0",
-        "chrisbjr/api-guard": "3.1.*",
-        "laracasts/matryoshka": "^0.1.0",
-        "predis/predis": "^1.0"
+        "chrisbjr/api-guard": "3.1.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
