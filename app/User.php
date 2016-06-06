@@ -37,6 +37,9 @@ class User extends Authenticatable
         return $this->hasMany(SimulatorHistory::class);
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function apiKey()
     {
         return $this->hasOne('Chrisbjr\ApiGuard\Models\ApiKey');

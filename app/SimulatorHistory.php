@@ -11,6 +11,9 @@ use Illuminate\Database\Eloquent\Model;
 class SimulatorHistory extends Model
 {
 
+    /**
+     * @var string
+     */
     protected $table = "simulator_history";
 
     /**

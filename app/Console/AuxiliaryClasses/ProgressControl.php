@@ -13,6 +13,10 @@ namespace App\Console\AuxiliaryClasses;
  * Class ProgressControl
  * @package App\Console\AuxiliaryClasses
  */
+/**
+ * Class ProgressControl
+ * @package App\Console\AuxiliaryClasses
+ */
 class ProgressControl
 {
 

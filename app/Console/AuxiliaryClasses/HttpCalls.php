@@ -43,6 +43,10 @@ class HttpCalls
         return $data;
     }
 
+    /**
+     * @param $symbol
+     * @return mixed|\Psr\Http\Message\ResponseInterface
+     */
     public function getExchangeHistory($symbol)
     {
         $data=$this->get_methods->interactiveChart($symbol);
@@ -52,6 +56,10 @@ class HttpCalls
         return $data;
     }
 
+    /**
+     * @param $symbol
+     * @return mixed|null|\Psr\Http\Message\ResponseInterface
+     */
     public function getCompanies($symbol)
     {
         $data=$this->get_methods->companyLookup($symbol);

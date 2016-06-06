@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+/**
+ * Class LiveInfoController
+ * @package App\Http\Controllers
+ */
 class LiveInfoController extends Controller
 {
 
@@ -18,6 +22,9 @@ class LiveInfoController extends Controller
         $this->middleware('auth');
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
         $data_grid = $this->getCompanyFollowFromDB();

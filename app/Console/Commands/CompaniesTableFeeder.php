@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Console\AuxiliaryClasses\DataBaseFunctions;
 use App\Console\AuxiliaryClasses\HttpCalls;
 use App\Console\AuxiliaryClasses\ProgressControl;
+use Cache;
 use DB;
 use Exception;
 use Illuminate\Console\Command;
@@ -90,6 +91,7 @@ class CompaniesTableFeeder extends Command
 
             }
         }
+        Cache::tags('companies')->flush();
         echo("100% Table companies fed\n");
     }
 }

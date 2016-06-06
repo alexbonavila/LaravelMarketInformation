@@ -3,8 +3,16 @@
 namespace App\Http\Transformers;
 
 
+/**
+ * Class CalculatorTransformer
+ * @package App\Http\Transformers
+ */
 class CalculatorTransformer extends Transformer
 {
+    /**
+     * @param $calcul
+     * @return array
+     */
     public function transform($calcul)
     {
         return [
