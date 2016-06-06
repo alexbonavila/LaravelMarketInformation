@@ -20,6 +20,8 @@ LaravelMarketInformation és una aplicació web feta amb Laravel, aquesta aplica
 
 6. Configurar el chron per que executi l'scheduler
 
+7. Anar a l'arxiu `/resources/views/layouts/partials/graph.blade.php` i canviar el domini `localhost:8000` de la linia **19** pel teu
+
 **Opcional:** si no configureu l'scheduler executeu aquesta comanda
 `$ php artisan company_follow:feed`
 
