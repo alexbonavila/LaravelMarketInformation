@@ -46,3 +46,13 @@ Despres d'aixó he continuat amb la API per emmagatzemar els calculs i ja tinc l
 Aquest fi de setmana he acabat de pulir la api i també he afegit mes testos
 ## 30/05/16
 Avui dilluns he separat les rutes de les api de les web per no fer servir el mateix middlewware i per millorar l'organització, a continuació he deixat al 100% l'store de la calculadora , també he fet mes testos i per ultim he planificat quan i amb quina frequenciá s'executaran les tasques d'scheduler
+## 31/05/16
+Vista i backend per poder veure la informació en temps real feta, també he fet la relació 1a1 des de ApiKeys a Usuaris, i per ultim he acabat el formulari per guardar els calculs fets a la calculadora
+## 01/06/16
+Comensant a fer les vistes de l'historial, bugs arreclats a les vistes i als tests, primera versió de grafics.
+## 02/06/16 i 03/06/16
+Fent grafics, buscant on puc fer events io Cache i començant la memoria i la presentació.
+## 04/06/16 i 05/06/16
+Acabant els grafics, fent pagina d'informació de perfil, arreclant les vistes, arreclant els testos i millorant la API.
+## 06/06/16
+Fent les ultimes pinzellades al projecte, acabant presentació i memoria. 
