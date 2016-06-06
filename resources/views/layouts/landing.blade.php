@@ -108,7 +108,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div id="showcase">
     <div class="container">
         <div class="row">
-            <h1 class="centered">Captures de pantalla</h1>
+            <h1 class="centered">Captures de pantalla PC</h1>
             <br>
             <div class="col-lg-8 col-lg-offset-2">
                 <div id="carousel-example-generic" class="carousel slide">
@@ -126,11 +126,19 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                         <div class="item">
                             <img src="{{ asset('/img/landing/captura2_pc.png') }}" alt="">
                         </div>
-                        <div class="item">
-                            <img src="{{ asset('/img/landing/captura3_pc.png') }}" alt="">
-                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1 class="centered">Captures de pantalla SmartPhone</h1>
+            <br>
+            <div class="col-lg-8 col-lg-offset-3">
+                <img src="{{ asset('/img/landing/Screenshot_2016-06-06-13-13-18.png') }}" width="300" height="300" alt="" class="img-thumbnail">
+                <img src="{{ asset('/img/landing/Screenshot_2016-06-06-13-13-43.png') }}" width="300" height="300" alt="" class="img-thumbnail">
+                <img src="{{ asset('/img/landing/Screenshot_2016-06-06-13-14-29.png') }}" width="300" height="300" alt="" class="img-thumbnail">
+                <img src="{{ asset('/img/landing/Screenshot_2016-06-06-13-15-13.png') }}" width="300" height="300" alt="" class="img-thumbnail">
+                <img src="{{ asset('/img/landing/Screenshot_2016-06-06-13-15-34.png') }}" width="300" height="300" alt="" class="img-thumbnail">
             </div>
         </div>
         <br>
