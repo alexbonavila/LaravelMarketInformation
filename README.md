@@ -18,7 +18,8 @@ LaravelMarketInformation és una aplicació web feta amb Laravel, aquesta aplica
 5. Passar la taula històrica a tots els arxius i formats
 `$ php artisan file_creator:create`
 
-6. Configurar el chron per que executi l'scheduler
+6. Configurar el chron per que executi l'scheduler 
+https://laravel.com/docs/master/scheduling
 
 7. Anar a l'arxiu `/resources/views/layouts/partials/graph.blade.php` i canviar el domini `localhost:8000` de la linia **19** pel teu
 
