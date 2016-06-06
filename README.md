@@ -5,6 +5,7 @@ LaravelMarketInformation és una aplicació web feta amb Laravel, aquesta aplica
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/alexbonavila/LaravelMarketInformation/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/alexbonavila/LaravelMarketInformation/?branch=master) [![Build Status](https://travis-ci.org/alexbonavila/LaravelMarketInformation.svg?branch=master)](https://travis-ci.org/alexbonavila/LaravelMarketInformation) [![Coverage Status](https://coveralls.io/repos/github/alexbonavila/LaravelMarketInformation/badge.svg?branch=master)](https://coveralls.io/github/alexbonavila/LaravelMarketInformation?branch=master)
 ## Instalació
 1. Instal·lar al nostre servidor donar els permisos necessaris.
+`$ composer require alexbonavila/laravel-market-information`
 
 2. Executar les migracions
 `$ php artisan migrate`
