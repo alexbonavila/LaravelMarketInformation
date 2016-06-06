@@ -21,9 +21,7 @@ class AcachaAdminLTELaravelTest extends TestCase
     public function testLandingPage()
     {
         $this->visit('/')
-             ->see('Acacha')
-             ->see('adminlte-laravel')
-             ->see('Pratt');
+             ->see('Alex');
     }
 
     /**
@@ -37,9 +35,7 @@ class AcachaAdminLTELaravelTest extends TestCase
 
         $this->actingAs($user)
             ->visit('/')
-            ->see('Acacha')
-            ->see('adminlte-laravel')
-            ->see('Pratt')
+            ->see('Alex')
             ->see($user->name);
     }
 
@@ -51,7 +47,7 @@ class AcachaAdminLTELaravelTest extends TestCase
     public function testLoginPage()
     {
         $this->visit('/login')
-            ->see('Sign in to start your session');
+            ->see('Entra per començar a informar-te');
     }
 
     /**
@@ -66,7 +62,7 @@ class AcachaAdminLTELaravelTest extends TestCase
         $this->visit('/login')
             ->type($user->email, 'email')
             ->type('passw0RD', 'password')
-            ->press('Sign In')
+            ->press('Entrar')
             ->seePageIs('/home')
             ->see($user->name);
     }
@@ -79,7 +75,7 @@ class AcachaAdminLTELaravelTest extends TestCase
     public function testLoginRequiredFields()
     {
         $this->visit('/login')
-            ->press('Sign In')
+            ->press('Entrar')
             ->see('The email field is required')
             ->see('The password field is required');
     }
@@ -92,7 +88,7 @@ class AcachaAdminLTELaravelTest extends TestCase
     public function testRegisterPage()
     {
         $this->visit('/register')
-            ->see('Register a new membership');
+            ->see('Registrar-me com a nou usuari');
     }
 
     /**
