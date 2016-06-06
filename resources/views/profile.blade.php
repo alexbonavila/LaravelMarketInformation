@@ -16,8 +16,8 @@
                         <input type="email" class="form-control" placeholder={{ Auth::user()->email}}>
                     </div>
                     <div class="form-group">
-                        <label for="api_key">API key</label>
-                        <input type="text" class="form-control"  placeholder="{{ Auth::user()->apiKey->key }}">
+                        <label for="api_key">API key</label></BR>
+                        <label >{{ Auth::user()->apiKey->key }}</label>
                     </div>
                 </form>
 @endsection

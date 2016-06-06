@@ -150,8 +150,8 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <div class="container">
         <p>
             Projecte creat per Alex Bonavila:</BR>
-            <a href="https://github.com/alexbonavila/LaravelMarketInformation">Github</a></BR>
-            <a href="http://acacha.org/mediawiki/Usuari:Alex_bonavila">Wiki</a>
+            El <a href="https://github.com/alexbonavila/LaravelMarketInformation">Github</a> del projecte.</BR>
+            La <a href="http://acacha.org/mediawiki/Usuari:Alex_bonavila">Wiki</a> del projecte
         </p>
 
     </div>
