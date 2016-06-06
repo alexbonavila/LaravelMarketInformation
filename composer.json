@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "name": "alexbonavila/LaravelMarketInformation",
+    "description": "Web app to about market information.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
