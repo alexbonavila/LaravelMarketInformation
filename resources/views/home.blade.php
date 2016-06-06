@@ -6,5 +6,7 @@
 
 
 @section('main-content')
+	@cache('companies')
 	@include('layouts.partials.grid')
+	@endcache
 @endsection

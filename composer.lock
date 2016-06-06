@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "738b738219be287eee623320cc83658e",
-    "content-hash": "6fc3950e00ef07ff4458eb598d29119e",
+    "hash": "2d1bbcc103352d068f6b539b305ef21a",
+    "content-hash": "ffa9448449e9060a57ca05f75174a012",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
@@ -1862,20 +1862,20 @@
         },
         {
             "name": "predis/predis",
-            "version": "v1.0.4",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nrk/predis.git",
-                "reference": "9ead747663bb1b1ae017dfa0d152aca87792b42f"
+                "reference": "0e17edbefb50c6cbd1acc4a6f6ef06399deb1af2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/9ead747663bb1b1ae017dfa0d152aca87792b42f",
-                "reference": "9ead747663bb1b1ae017dfa0d152aca87792b42f",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/0e17edbefb50c6cbd1acc4a6f6ef06399deb1af2",
+                "reference": "0e17edbefb50c6cbd1acc4a6f6ef06399deb1af2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": ">=5.3.9"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.8"
@@ -1908,7 +1908,7 @@
                 "predis",
                 "redis"
             ],
-            "time": "2016-05-30 15:25:52"
+            "time": "2016-06-01 22:06:21"
         },
         {
             "name": "psr/http-message",

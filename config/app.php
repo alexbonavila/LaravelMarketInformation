@@ -163,7 +163,7 @@ return [
 
 
         Chrisbjr\ApiGuard\Providers\ApiGuardServiceProvider::class,
-        //Laracasts\Matryoshka\MatryoshkaServiceProvider::class,
+        Laracasts\Matryoshka\MatryoshkaServiceProvider::class,
     ],
 
     /*

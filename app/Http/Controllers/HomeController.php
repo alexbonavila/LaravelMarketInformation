@@ -8,6 +8,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use Cache;
 use DB;
 use Illuminate\Http\Request;
 
@@ -43,7 +44,11 @@ class HomeController extends Controller
      */
     public function getCompaniesInfoFromDB()
     {
-        $companies = DB::table('companies')->get();
+        $companies = Cache::rememberForever(
+            'companies', function(){
+            return DB::table('companies')->get();
+        });
+        //$companies = DB::table('companies')->get();
 
         $companies = json_encode($companies);
 
