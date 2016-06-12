@@ -6,6 +6,7 @@ export default {
     props: {
         labels: {},
         values: {},
+        symbol: {},
         color: {}
     },
 
@@ -17,7 +18,8 @@ export default {
             datasets: [
                 {
                     fillColor: this.color,
-                    data: this.values
+                    data: this.values,
+                    label: this.symbol
                 }
             ]
         };

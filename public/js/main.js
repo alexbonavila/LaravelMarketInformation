@@ -23972,6 +23972,7 @@ exports.default = {
     props: {
         labels: {},
         values: {},
+        symbol: {},
         color: {}
     },
 
@@ -23982,7 +23983,8 @@ exports.default = {
 
             datasets: [{
                 fillColor: this.color,
-                data: this.values
+                data: this.values,
+                label: this.symbol
             }]
         };
 

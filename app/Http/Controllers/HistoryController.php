@@ -27,6 +27,8 @@ class HistoryController extends Controller
             $dates= $query[0]->dates;
             $values= $query[0]->values;
 
+            $symbol=json_encode($symbol);
+
             return view('history', ['dates' => $dates, 'values'=> $values,'symbol'=> $symbol]);
         }else{
             return view('errors.dades');
