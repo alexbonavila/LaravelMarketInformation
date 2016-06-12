@@ -68,4 +68,26 @@ class CalculatorApiTest extends TestCase
         $user->getCalculations()->save($calcul);
         return $calcul;
     }
+
+    public function testCreateFakeCalculCrashControlled()
+    {
+        $user=$this->testCreateUser();
+
+        $faker = Factory::create();
+        $calcul = new SimulatorHistory();
+
+        $calcul->name = $faker->sentence;
+        $calcul->quantity_to_buy = $faker->sentence;
+        $calcul->quote_to_buy = $faker->sentence;
+        $calcul->price_to_buy = $faker->sentence;
+        $calcul->quantity_to_sell = $faker->sentence;
+        $calcul->quote_to_sell = $faker->sentence;
+        $calcul->tax_percent_to_discount = $faker->sentence;
+        $calcul->price_to_sell = $faker->sentence;
+        $calcul->gains_or_losses = $faker->sentence;
+
+        $user->getCalculations()->save($calcul);
+        return $calcul;
+    }
+
 }
