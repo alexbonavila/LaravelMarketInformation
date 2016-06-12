@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use DB;
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
 
 /**
@@ -24,11 +22,16 @@ class HistoryController extends Controller
             ->where("symbol","=",$id)
             ->get();
 
-        $symbol= $query[0]->symbol;
-        $dates= $query[0]->dates;
-        $values= $query[0]->values;
+        if(isset($query[0]->symbol)&&isset($query[0]->dates)&&isset($query[0]->values)){
+            $symbol= $query[0]->symbol;
+            $dates= $query[0]->dates;
+            $values= $query[0]->values;
 
-        return view('history', ['dates' => $dates, 'values'=> $values,'symbol'=> $symbol]);
+            return view('history', ['dates' => $dates, 'values'=> $values,'symbol'=> $symbol]);
+        }else{
+            return view('errors.dades');
+        }
+
     }
 
 

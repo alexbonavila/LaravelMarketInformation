@@ -16,10 +16,8 @@ $('.form-calc-save button[type=submit]').click(function(e){
         processData: false,
         data: formData,
         success: function(data) {
-            swal("Guardat amb exit");
         },
         error: function(data){
-            swal("Error al guardar");
         }
     });
 });

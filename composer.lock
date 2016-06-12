@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2d1bbcc103352d068f6b539b305ef21a",
-    "content-hash": "ffa9448449e9060a57ca05f75174a012",
+    "hash": "44960fb0d4c579371abebc343aab7178",
+    "content-hash": "380dcf6b08a49ef0b268e5c11160d9aa",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
@@ -3354,6 +3354,64 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2016-03-04 07:55:57"
+        },
+        {
+            "name": "vinkla/alert",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vinkla/alert.git",
+                "reference": "494e741262f7a666509377a7ce99a749a648463e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vinkla/alert/zipball/494e741262f7a666509377a7ce99a749a648463e",
+                "reference": "494e741262f7a666509377a7ce99a749a648463e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "5.1.* || 5.2.* || 5.3.*",
+                "illuminate/session": "5.1.* || 5.2.* || 5.3.*",
+                "illuminate/support": "5.1.* || 5.2.* || 5.3.*",
+                "php": "^5.5.9 || ^7.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "^3.1",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.8 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Vinkla\\Alert\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Klaiber",
+                    "email": "hello@vinkla.com"
+                }
+            ],
+            "description": "An alert helper for Laravel",
+            "keywords": [
+                "alert",
+                "bootstrap",
+                "flash",
+                "laravel"
+            ],
+            "time": "2016-05-05 11:05:45"
         },
         {
             "name": "vlucas/phpdotenv",

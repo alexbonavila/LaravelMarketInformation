@@ -16,7 +16,8 @@
         "soapbox/laravel-formatter": "^2.0",
         "chrisbjr/api-guard": "3.1.*",
         "laracasts/matryoshka": "^0.1.0",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "vinkla/alert": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

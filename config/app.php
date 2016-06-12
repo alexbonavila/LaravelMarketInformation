@@ -164,6 +164,7 @@ return [
 
         Chrisbjr\ApiGuard\Providers\ApiGuardServiceProvider::class,
         Laracasts\Matryoshka\MatryoshkaServiceProvider::class,
+        Vinkla\Alert\AlertServiceProvider::class,
     ],
 
     /*
@@ -216,6 +217,7 @@ return [
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
 
         'ApiGuardAuth' => \Chrisbjr\ApiGuard\Facades\ApiGuardAuth::class,
+        'Alert' => Vinkla\Alert\Facades\Alert::class,
     ],
 
 ];
