@@ -4,11 +4,11 @@
         <input type="hidden" id="api_key" name="api_key" content="{{ Auth::user()->apiKey->key }}" disabled>
 
         <div class="col-xs-4">
-            <labe>Email de l'usuari</labe><input type="text" class="form-control" placeholder={{ Auth::user()->email}} disabled>
+            <label>Email de l'usuari</label><input type="text" class="form-control" placeholder={{ Auth::user()->email}} disabled>
         </div>
         @endif
         <div class="col-xs-4">
-            <labe>Nom del calcul</labe><input type="text" class="form-control" name="name" id="name" placeholder="Titol del calcul">
+            <label>Nom del calcul</label><input type="text" class="form-control" name="name" id="name" placeholder="Titol del calcul">
         </div>
             </BR>
         </BR>
@@ -17,14 +17,14 @@
         <h3><span class="label label-primary">Preu de compra</span></h3>
 
         <div class="col-xs-3">
-            <labe>Quantitat d'accions a comprar</labe><input type="text" name="quantity_to_buy" id="quantity_to_buy" class="form-control" placeholder="Quantitat a comprar" onKeyUp="buy()">
+            <label>Quantitat d'accions a comprar</label><input type="text" name="quantity_to_buy" id="quantity_to_buy" class="form-control" placeholder="Quantitat a comprar" onKeyUp="buy()">
         </div>
         <div class="col-xs-2">
-            <labe>Preu per acció</labe><input type="text" name="quote_to_buy" id="quote_to_buy" class="form-control" placeholder="Preu per acció" onKeyUp="buy()">
+            <label>Preu per acció</label><input type="text" name="quote_to_buy" id="quote_to_buy" class="form-control" placeholder="Preu per acció" onKeyUp="buy()">
         </div>
 
         <div class="col-xs-3">
-            <labe>Preu total de la compra</labe><input type="text" name="price_to_buy" id="price_to_buy" class="form-control" placeholder="Total Compra" readonly>
+            <label>Preu total de la compra</label><input type="text" name="price_to_buy" id="price_to_buy" class="form-control" placeholder="Total Compra" readonly>
         </div>
             </BR>
         </BR>
@@ -32,16 +32,16 @@
 
         <h3><span class="label label-primary">Preu de venda</span></h3>
         <div class="col-xs-3">
-            <labe>Quantitat d'accions a vendre</labe><input type="text" name="quantity_to_sell" id="quantity_to_sell" class="form-control" placeholder="Quantitat a vendre" onKeyUP="sell()">
+            <label>Quantitat d'accions a vendre</label><input type="text" name="quantity_to_sell" id="quantity_to_sell" class="form-control" placeholder="Quantitat a vendre" onKeyUP="sell()">
         </div>
         <div class="col-xs-2">
-            <labe>Preu per acció</labe><input type="text" name="quote_to_sell" id="quote_to_sell" class="form-control" placeholder="Preu per acció" onKeyUP="sell()">
+            <label>Preu per acció</label><input type="text" name="quote_to_sell" id="quote_to_sell" class="form-control" placeholder="Preu per acció" onKeyUP="sell()">
         </div>
         <div class="col-xs-2">
-            <labe>Impostos</labe><input type="text" name="tax_percent_to_discount" id="tax_percent_to_discount" class="form-control" placeholder="% d'impostos" onKeyUP="sell()">
+            <label>Impostos</label><input type="text" name="tax_percent_to_discount" id="tax_percent_to_discount" class="form-control" placeholder="% d'impostos" onKeyUP="sell()">
         </div>
         <div class="col-xs-3">
-            <labe>Preu total de la vanda</labe><input type="text" name="price_to_sell" id="price_to_sell" class="form-control" placeholder="Total Venda" readonly>
+            <label>Preu total de la vanda</label><input type="text" name="price_to_sell" id="price_to_sell" class="form-control" placeholder="Total Venda" readonly>
         </div>
 
         </BR>

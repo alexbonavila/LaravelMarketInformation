@@ -16,8 +16,10 @@ $('.form-calc-save button[type=submit]').click(function(e){
         processData: false,
         data: formData,
         success: function(data) {
+            swal("Exit", "El formulari s'ha guardat correctament!")
         },
         error: function(data){
+            swal("Error", "Ha ocorregut un error al guardar el formulari")
         }
     });
 });

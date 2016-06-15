@@ -9,6 +9,7 @@
 
 <script src="{{asset('js/main.js')}}"></script>
 <script src="{{asset('js/all.js')}}"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 {{--<script src="{{'js/graph_vue.js'}}"></script>--}}
 
 
